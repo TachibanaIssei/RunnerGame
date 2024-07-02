@@ -76,6 +76,7 @@ namespace nsK2Engine {
 		/// エンジンの処理を実行。
 		/// </summary>
 		void Execute();
+
 #ifdef K2_DEBUG
 		/// <summary>
 		/// ベクトルのデバッグ出力

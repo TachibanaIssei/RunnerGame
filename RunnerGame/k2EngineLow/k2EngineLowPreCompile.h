@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #define _CRT_SECURE_NO_WARNINGS
 #define _CRT_NON_CONFORMING_SWPRINTFS
 #pragma comment( lib, "xinput.lib")
@@ -36,13 +36,13 @@
 
 #include "graphics/d3dx12.h"
 
-const int MAX_RENDERING_TARGET = D3D12_SIMULTANEOUS_RENDER_TARGET_COUNT;	//�����_�����O�^�[�Q�b�g�̍ő吔�B
+const int MAX_RENDERING_TARGET = D3D12_SIMULTANEOUS_RENDER_TARGET_COUNT;	//レンダリングターゲットの最大数。
 
 using namespace Microsoft::WRL;
 
-#define USE_FPS_LIMITTER		// �L����FPS�ɏ����݂���B
-static const int MAX_FPS = 60;	// �ő�FPS�BUSE_FPS_LIMITTER���L���ȂƂ��Ɏg�p�����B
-#define ENABLE_DXR_ON_RTX_ONLY	// �L����DXR��RTX�V���[�Y�̂ݗL���B
+#define USE_FPS_LIMITTER		// 有効でFPSに上限を設ける。
+static const int MAX_FPS = 60;	// 最大FPS。USE_FPS_LIMITTERが有効なときに使用される。
+#define ENABLE_DXR_ON_RTX_ONLY	// 有効でDXRはRTXシリーズのみ有効。
 
 #include "util/Noncopyable.h"
 #include "dbg/MyAssert.h"
@@ -81,11 +81,11 @@ static const int MAX_FPS = 60;	// �ő�FPS�BUSE_FPS_LIMITTER���L���ȂƂ��Ɏg�p���
 
 #include "graphics/GaussianBlur.h"
 
-const UINT FRAME_BUFFER_W = 1920;	// �t���[���o�b�t�@�̕��B
-const UINT FRAME_BUFFER_H = 1080;	// �t���[���o�b�t�@�̍����B
-const UINT UI_SPACE_WIDTH = 1920;	// UI��Ԃ̕��B
-const UINT UI_SPACE_HEIGHT = 1080;	// UI��Ԃ̍����B
-static const int MAX_BONE = 512;	// �{�[���̍ő吔�B
+const UINT FRAME_BUFFER_W = 1280;	// フレームバッファの幅。
+const UINT FRAME_BUFFER_H = 720;	// フレームバッファの高さ。
+const UINT UI_SPACE_WIDTH = 1280;	// UI空間の幅。
+const UINT UI_SPACE_HEIGHT = 720;	// UI空間の高さ。
+static const int MAX_BONE = 512;	// ボーンの最大数。
 
 
 

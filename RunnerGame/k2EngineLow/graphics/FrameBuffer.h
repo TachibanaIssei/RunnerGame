@@ -91,6 +91,11 @@ namespace nsK2EngineLow {
 			return m_backBufferIndex;
 		}
 		void Release();
+
+		int GetFrameBufferCount() const
+		{
+			return (int)FRAME_BUFFER_COUNT;
+		}
 	private:
 		bool CreateDescriptorHeapForFrameBuffer(ID3D12Device5* d3dDevice);
 		bool CreateRTVForFameBuffer(ID3D12Device5* d3dDevice);
