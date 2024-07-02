@@ -1,6 +1,7 @@
 ﻿#include "k2EngineLowPreCompile.h"
 #include "ImGuiManager.h"
 
+#ifdef K2_DEBUG
 void ImGuiManager::Init(HWND hwnd, ID3D12Device* device, ID3D12CommandQueue* commandQueue)
 {
 	m_device = device;
@@ -54,3 +55,26 @@ void ImGuiManager::Shutdown()
     ImGui_ImplWin32_Shutdown();
     ImGui::DestroyContext();
 }
+
+#else
+void ImGuiManager::Init(HWND hwnd, ID3D12Device* device, ID3D12CommandQueue* commandQueue)
+{
+}
+
+void ImGuiManager::BeginFrame()
+{
+}
+
+void ImGuiManager::EndFrame()
+{
+}
+
+void ImGuiManager::Render(ID3D12GraphicsCommandList* commandList)
+{
+}
+
+void ImGuiManager::Shutdown()
+{
+}
+
+#endif
