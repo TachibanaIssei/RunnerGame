@@ -12,7 +12,6 @@
       <Filter>system</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="imGUI\MyimGUI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -20,6 +19,5 @@
       <Filter>system</Filter>
     </ClInclude>
     <ClInclude Include="Game.h" />
-    <ClInclude Include="imGUI\MyimGUI.h" />
   </ItemGroup>
 </Project>

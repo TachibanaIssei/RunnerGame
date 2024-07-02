@@ -231,6 +231,13 @@
     <ClCompile Include="HID\GamePadVIbration.cpp">
       <Filter>HID</Filter>
     </ClCompile>
+    <ClCompile Include="ImGUI\imgui.cpp" />
+    <ClCompile Include="ImGUI\imgui_draw.cpp" />
+    <ClCompile Include="ImGUI\imgui_impl_dx12.cpp" />
+    <ClCompile Include="ImGUI\imgui_impl_win32.cpp" />
+    <ClCompile Include="ImGUI\imgui_tables.cpp" />
+    <ClCompile Include="ImGUI\imgui_widgets.cpp" />
+    <ClCompile Include="ImGUI\ImGuiManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="k2EngineLowPreCompile.h" />
@@ -514,6 +521,15 @@
     <ClInclude Include="HID\GamePadVibration.h">
       <Filter>HID</Filter>
     </ClInclude>
+    <ClInclude Include="ImGUI\imconfig.h" />
+    <ClInclude Include="ImGUI\imgui.h" />
+    <ClInclude Include="ImGUI\imgui_impl_dx12.h" />
+    <ClInclude Include="ImGUI\imgui_impl_win32.h" />
+    <ClInclude Include="ImGUI\imgui_internal.h" />
+    <ClInclude Include="ImGUI\ImGuiManager.h" />
+    <ClInclude Include="ImGUI\imstb_rectpack.h" />
+    <ClInclude Include="ImGUI\imstb_textedit.h" />
+    <ClInclude Include="ImGUI\imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="graphics">

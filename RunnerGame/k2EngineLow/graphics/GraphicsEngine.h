@@ -15,6 +15,7 @@
 #include "font/FontEngine.h"
 #include "FrameBuffer.h"
 #include <pix.h>
+#include "../k2EngineLow/ImGUI/ImGuiManager.h"
 
 namespace nsK2EngineLow {
 	/// <summary>
@@ -416,6 +417,8 @@ namespace nsK2EngineLow {
 		bool m_isExecuteCommandList = false;											//コマンドリストをGPUに流した？
 		std::list< RequestDelayReleaseD3D12Object > m_reqDelayRelease3d12ObjectList;	// D3D12オブジェクトの遅延解放リクエストのリスト。
 		bool m_isPossibleRaytracing = false;		// レイトレーシングを行うことが可能？
+
+		ImGuiManager	m_imGuiManager;
 	};
 	extern GraphicsEngine* g_graphicsEngine;	//グラフィックスエンジン
 	extern Camera* g_camera2D;					//2Dカメラ。
