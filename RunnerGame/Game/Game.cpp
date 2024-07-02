@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "Game.h"
-#include "../k2EngineLow/ImGUI/imgui.h"
 
 bool Game::Start()
 {

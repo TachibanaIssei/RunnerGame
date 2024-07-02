@@ -1,26 +1,30 @@
-#include "k2EngineLowPreCompile.h"
+ï»¿#include "k2EngineLowPreCompile.h"
 #include "ImGuiManager.h"
 
 void ImGuiManager::Init(HWND hwnd, ID3D12Device* device, ID3D12CommandQueue* commandQueue)
 {
 	m_device = device;
 
-    // ImGui‚ÌƒRƒ“ƒeƒLƒXƒg‚ðì¬
-        IMGUI_CHECKVERSION();
+    // ImGuiã®ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã‚’ä½œæˆ
+    IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;
+    io.Fonts->AddFontDefault();
+    io.DisplayFramebufferScale = ImVec2(1.0f, 1.0f);
 
-    // ƒXƒ^ƒCƒ‹‚ÌÝ’è
-    ImGui::StyleColorsDark();
+    // ã‚¹ã‚¿ã‚¤ãƒ«ã®è¨­å®š
+    //ImGui::StyleColorsDark();
+    ImGui::StyleColorsLight();
+    //ImGui::StyleColorsClassic();
 
-    // ƒfƒXƒNƒŠƒvƒ^ƒq[ƒv‚ÌÝ’è
+    // ãƒ‡ã‚¹ã‚¯ãƒªãƒ—ã‚¿ãƒ’ãƒ¼ãƒ—ã®è¨­å®š
     D3D12_DESCRIPTOR_HEAP_DESC desc = {};
     desc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV;
     desc.NumDescriptors = 1;
     desc.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE;
     m_device->CreateDescriptorHeap(&desc, IID_PPV_ARGS(&m_pd3dSrvDescHeap));
 
-    // ƒoƒbƒNƒGƒ“ƒh‚Ì‰Šú‰»
+    // ãƒãƒƒã‚¯ã‚¨ãƒ³ãƒ‰ã®åˆæœŸåŒ–
     ImGui_ImplWin32_Init(hwnd);
     ImGui_ImplDX12_Init(m_device, 2, DXGI_FORMAT_R8G8B8A8_UNORM, m_pd3dSrvDescHeap,
         m_pd3dSrvDescHeap->GetCPUDescriptorHandleForHeapStart(),
