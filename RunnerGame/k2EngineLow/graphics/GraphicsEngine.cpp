@@ -26,10 +26,8 @@ namespace nsK2EngineLow {
 	{
 		WaitDraw();
 
-#ifdef K2_DEBUG
 		//ImGuiの終了
 		m_imGuiManager.Shutdown();
-#endif
 
 		for (auto& req : m_reqDelayRelease3d12ObjectList) {
 			if (req.d3dObject) {
@@ -183,10 +181,8 @@ namespace nsK2EngineLow {
 		//レイトレエンジンを初期化。
 		m_raytracingEngine.Init(raytracingInitData);
 
-#ifdef K2_DEBUG
 		//ImGuiを初期化
 		m_imGuiManager.Init(hwnd, GetD3DDevice(), GetCommandQueue());
-#endif
 
 		return true;
 	}
@@ -439,10 +435,8 @@ namespace nsK2EngineLow {
 		// レンダリングターゲットへの描き込み完了待ち
 		m_renderContext.WaitUntilFinishDrawingToRenderTarget(m_frameBuffer.GetCurrentRenderTarget());
 			
-#ifdef K2_DEBUG
 		m_imGuiManager.EndFrame();
 		m_imGuiManager.Render(m_commandList[m_frameIndex]);
-#endif
 
 		if (m_isExecuteCommandList)
 		{
