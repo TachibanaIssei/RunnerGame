@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Title.h"
 #include "OptionScreen.h"
+#include "Game.h"
 
 Title::~Title()
 {
@@ -19,6 +20,7 @@ bool Title::Start()
 void Title::Update()
 {
   CheckAndActivateOptionScreen();
+  GoToGame();
 
   m_titleLevel2D.Update();
 }
@@ -37,5 +39,14 @@ void Title::CheckAndActivateOptionScreen()
   if (m_optionScreen->IsActive())
   {
     return;
+  }
+}
+
+void Title::GoToGame()
+{
+  if (g_pad[0]->IsTrigger(enButtonA))
+  {
+    NewGO<Game>(0, "game");
+    DeleteGO(this);
   }
 }

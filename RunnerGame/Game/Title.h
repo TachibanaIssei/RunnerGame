@@ -18,6 +18,10 @@ private:
   /// オプション画面がアクティブかどうかを見る
   /// </summary>
   void CheckAndActivateOptionScreen();
+  /// <summary>
+  /// インゲームへ行く
+  /// </summary>
+  void GoToGame();
 
 private:
   Level2DRender m_titleLevel2D;
