@@ -16,6 +16,7 @@
     <ClCompile Include="Title.cpp" />
     <ClCompile Include="GameVolumeManager.cpp" />
     <ClCompile Include="OptionScreen.cpp" />
+    <ClCompile Include="ResultScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -27,5 +28,6 @@
     <ClInclude Include="Title.h" />
     <ClInclude Include="GameVolumeManager.h" />
     <ClInclude Include="OptionScreen.h" />
+    <ClInclude Include="ResultScreen.h" />
   </ItemGroup>
 </Project>
