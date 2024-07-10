@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Game.h"
-#include "ImGuiInGame.h"
-#include "ResultScreen.h"
+#include "UI/ImGuiInGame.h"
+#include "Scene/ResultScreen.h"
 
 Game::~Game()
 {

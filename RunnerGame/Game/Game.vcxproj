@@ -224,28 +224,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameVolumeManager.cpp" />
-    <ClCompile Include="ImGuiInGame.cpp" />
+    <ClCompile Include="UI\GameVolumeManager.cpp" />
+    <ClCompile Include="UI\ImGuiInGame.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="OptionScreen.cpp" />
-    <ClCompile Include="ResultScreen.cpp" />
+    <ClCompile Include="Scene\OptionScreen.cpp" />
+    <ClCompile Include="Scene\ResultScreen.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Preview|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="system\system.cpp" />
-    <ClCompile Include="Title.cpp" />
+    <ClCompile Include="Scene\Title.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
-    <ClInclude Include="GameVolumeManager.h" />
-    <ClInclude Include="ImGuiInGame.h" />
-    <ClInclude Include="OptionScreen.h" />
-    <ClInclude Include="ResultScreen.h" />
+    <ClInclude Include="UI\GameVolumeManager.h" />
+    <ClInclude Include="UI\ImGuiInGame.h" />
+    <ClInclude Include="Scene\OptionScreen.h" />
+    <ClInclude Include="Scene\ResultScreen.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="system\system.h" />
-    <ClInclude Include="Title.h" />
+    <ClInclude Include="Scene\Title.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

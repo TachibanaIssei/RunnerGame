@@ -12,11 +12,11 @@
       <Filter>system</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="ImGuiInGame.cpp" />
-    <ClCompile Include="Title.cpp" />
-    <ClCompile Include="GameVolumeManager.cpp" />
-    <ClCompile Include="OptionScreen.cpp" />
-    <ClCompile Include="ResultScreen.cpp" />
+    <ClCompile Include="UI\ImGuiInGame.cpp" />
+    <ClCompile Include="Scene\Title.cpp" />
+    <ClCompile Include="UI\GameVolumeManager.cpp" />
+    <ClCompile Include="Scene\OptionScreen.cpp" />
+    <ClCompile Include="Scene\ResultScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -24,10 +24,10 @@
       <Filter>system</Filter>
     </ClInclude>
     <ClInclude Include="Game.h" />
-    <ClInclude Include="ImGuiInGame.h" />
-    <ClInclude Include="Title.h" />
-    <ClInclude Include="GameVolumeManager.h" />
-    <ClInclude Include="OptionScreen.h" />
-    <ClInclude Include="ResultScreen.h" />
+    <ClInclude Include="UI\ImGuiInGame.h" />
+    <ClInclude Include="Scene\Title.h" />
+    <ClInclude Include="UI\GameVolumeManager.h" />
+    <ClInclude Include="Scene\OptionScreen.h" />
+    <ClInclude Include="Scene\ResultScreen.h" />
   </ItemGroup>
 </Project>
