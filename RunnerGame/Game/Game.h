@@ -14,6 +14,9 @@ public:
 	void Render(RenderContext& rc);
 
 private:
+  void GoToResult();
+
+private:
   ImGuiInGame* m_imGuiInGame;
 	ModelRender m_modelRender;
 	Vector3 m_pos;

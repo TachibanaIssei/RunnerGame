@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Game.h"
 #include "ImGuiInGame.h"
+#include "ResultScreen.h"
 
 Game::~Game()
 {
@@ -16,10 +17,20 @@ bool Game::Start()
 
 void Game::Update()
 {
+  GoToResult();
 	m_modelRender.Update();
 }
 
 void Game::Render(RenderContext& rc)
 {
 	m_modelRender.Draw(rc);
+}
+
+void Game::GoToResult()
+{
+  if (g_pad[0]->IsTrigger(enButtonSelect))
+  {
+    NewGO<ResultScreen>(0, "result");
+    DeleteGO(this);
+  }
 }

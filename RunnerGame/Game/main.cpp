@@ -4,7 +4,8 @@
 #include<InitGUID.h>
 #include<dxgidebug.h>
 
-#include "Game.h"
+//#include "Game.h"
+#include "Title.h"
 
 void ReportLiveObjects()
 {
@@ -26,13 +27,14 @@ void ReportLiveObjects()
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow)
 {
 	//ゲームの初期化。
-	InitGame(hInstance, hPrevInstance, lpCmdLine, nCmdShow, TEXT("Game"));
+	InitGame(hInstance, hPrevInstance, lpCmdLine, nCmdShow, TEXT("RunGame"));
 	//////////////////////////////////////
 	// ここから初期化を行うコードを記述する。
 	//////////////////////////////////////
 
+  GameVolumeManager::CreateInstance();
 	//Gameクラスのオブジェクトを作成。
-	NewGO<Game>(0, "game");
+	NewGO<Title>(0, "title");
 
 	//////////////////////////////////////
 	// 初期化を行うコードを書くのはここまで！！！
@@ -46,7 +48,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 		}
 		K2Engine::GetInstance()->Execute();
 	}
-
+  GameVolumeManager::DeleteInstance();
 	K2Engine::DeleteInstance();
 
 #ifdef _DEBUG
