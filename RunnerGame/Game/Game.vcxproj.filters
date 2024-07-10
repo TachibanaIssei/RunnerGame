@@ -17,6 +17,7 @@
     <ClCompile Include="UI\GameVolumeManager.cpp" />
     <ClCompile Include="Scene\OptionScreen.cpp" />
     <ClCompile Include="Scene\ResultScreen.cpp" />
+    <ClCompile Include="Player\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -29,5 +30,6 @@
     <ClInclude Include="UI\GameVolumeManager.h" />
     <ClInclude Include="Scene\OptionScreen.h" />
     <ClInclude Include="Scene\ResultScreen.h" />
+    <ClInclude Include="Player\Player.h" />
   </ItemGroup>
 </Project>

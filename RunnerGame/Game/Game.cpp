@@ -2,6 +2,7 @@
 #include "Game.h"
 #include "UI/ImGuiInGame.h"
 #include "Scene/ResultScreen.h"
+#include "Player/Player.h"
 
 Game::~Game()
 {
@@ -10,7 +11,7 @@ Game::~Game()
 
 bool Game::Start()
 {
-	m_modelRender.Init("Assets/modelData/unityChan.tkm");
+  m_player = NewGO<Player>(0, "player");
   m_imGuiInGame = NewGO<ImGuiInGame>(0, "imGuiInGame");
 	return true;
 }
@@ -18,12 +19,12 @@ bool Game::Start()
 void Game::Update()
 {
   GoToResult();
-	m_modelRender.Update();
+	
 }
 
 void Game::Render(RenderContext& rc)
 {
-	m_modelRender.Draw(rc);
+	
 }
 
 void Game::GoToResult()
