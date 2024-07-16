@@ -224,6 +224,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Player\PlayerConstants.cpp" />
     <ClCompile Include="Player\Player.cpp" />
     <ClCompile Include="UI\GameVolumeManager.cpp" />
     <ClCompile Include="UI\ImGuiInGame.cpp" />
@@ -240,6 +241,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Player\PlayerConstants.h" />
     <ClInclude Include="Player\Player.h" />
     <ClInclude Include="UI\GameVolumeManager.h" />
     <ClInclude Include="UI\ImGuiInGame.h" />

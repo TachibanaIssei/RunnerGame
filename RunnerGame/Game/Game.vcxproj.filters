@@ -18,6 +18,7 @@
     <ClCompile Include="Scene\OptionScreen.cpp" />
     <ClCompile Include="Scene\ResultScreen.cpp" />
     <ClCompile Include="Player\Player.cpp" />
+    <ClCompile Include="Player\PlayerConstants.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -31,5 +32,6 @@
     <ClInclude Include="Scene\OptionScreen.h" />
     <ClInclude Include="Scene\ResultScreen.h" />
     <ClInclude Include="Player\Player.h" />
+    <ClInclude Include="Player\PlayerConstants.h" />
   </ItemGroup>
 </Project>

@@ -1,18 +1,20 @@
 #include "stdafx.h"
 #include "ImGuiInGame.h"
+#include "Player/Player.h"
 
 bool ImGuiInGame::Start()
 {
-    return true;
+  //m_player = FindGO<Player>("player");
+  return true;
 }
 
 void ImGuiInGame::Update()
 {
 #ifdef K2_DEBUG
   // UIの定義
-  ImGui::Begin("RunGame");
+  /*ImGui::Begin("RunGame");
   
-  ImGui::End();
+  ImGui::End();*/
 #endif
 }
 
